@@ -100,7 +100,7 @@ elif city_type == 'Brussels':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'European Parliament, Rue Wiertz 60, 1047 Bruxelles'
             
-            X = np.load('buildings_brussels\surface_European Parliament.npy')    
+            X = np.load('./buildings_brussels/surface_European Parliament.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -131,7 +131,7 @@ elif city_type == 'Brussels':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Law Courts of Brussels, Poelaert 1, 1000 Brussels '
             
-            X = np.load('buildings_brussels\surface_Palace_of_Justice_of_Brussels.npy')    
+            X = np.load('./buildings_brussels/surface_Palace_of_Justice_of_Brussels.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -162,7 +162,7 @@ elif city_type == 'Brussels':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'National Basilica of the Sacred Heart, R20 5, 1083 Ganshoren'
             
-            X = np.load('buildings_brussels\surface_National_Basilica_Koekelberg.npy')    
+            X = np.load('./buildings_brussels/surface_National_Basilica_Koekelberg.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -197,7 +197,7 @@ elif city_type == 'Antwerp':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Stadhuis_van_Antwerpen, Grote Markt 1 2000 Antwerpen'
             
-            X = np.load('buildings_antwerp\surface_Stadhuis_van_Antwerpen.npy')    
+            X = np.load('./buildings_antwerp/surface_Stadhuis_van_Antwerpen.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -227,7 +227,7 @@ elif city_type == 'Antwerp':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Antwerpen Central, Koningin Astridplein 27 2018 Antwerpen'
             
-            X = np.load('buildings_antwerp\surface_Antwerpen_Central.npy')    
+            X = np.load('./buildings_antwerp/surface_Antwerpen_Central.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -257,7 +257,7 @@ elif city_type == 'Antwerp':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Cathedral of Our Lady Antwerp, Groenplaats 21 2000 Antwerpen'
             
-            X = np.load('buildings_antwerp\surface_Cathedral_of_Our_Lady_Antwerp.npy')    
+            X = np.load('./buildings_antwerp/surface_Cathedral_of_Our_Lady_Antwerp.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -287,7 +287,7 @@ elif city_type == 'Antwerp':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Boerentoren, Boerentoren 2000 Antwerpen'
             
-            X = np.load('buildings_antwerp\surface_Boerentoren.npy')    
+            X = np.load('./buildings_antwerp/surface_Boerentoren.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -321,7 +321,7 @@ elif city_type == 'Gent':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Saint Bavos Cathedral, Saint Bavo Cathedral 9000 Gent'
             
-            X = np.load('buildings_gent\surface_Saint_Bavos_Cathedral.npy')    
+            X = np.load('./buildings_gent/surface_Saint_Bavos_Cathedral.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -351,7 +351,7 @@ elif city_type == 'Gent':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Gravensteen, Sint-Veerleplein 11 9000 Gent'
             
-            X = np.load('buildings_gent\surface_Gravensteen.npy')    
+            X = np.load('./buildings_gent/surface_Gravensteen.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -381,7 +381,7 @@ elif city_type == 'Gent':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Saint Nicholas Church, Cataloniëstraat 9000 Gent'
             
-            X = np.load('buildings_gent\surface_Saint_Nicholas_Church.npy')    
+            X = np.load('./buildings_gent/surface_Saint_Nicholas_Church.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -411,7 +411,7 @@ elif city_type == 'Gent':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Sint Pietersabdij, Tweekerkenstraat 2 9000 Gent'
             
-            X = np.load('buildings_gent\surface_Sint_Pietersabdij.npy')    
+            X = np.load('./buildings_gent/surface_Sint_Pietersabdij.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -446,7 +446,7 @@ elif city_type == 'Bruges':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Belfry_of_Bruges, Markt 7 8000 Brugge'
             
-            X = np.load('buildings_bruges\surface_Belfry_of_Bruges.npy')    
+            X = np.load('./buildings_bruges/surface_Belfry_of_Bruges.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
@@ -476,7 +476,7 @@ elif city_type == 'Bruges':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Church of our Lady Bruges, Mariastraat 8000 Brugge'
             
-            X = np.load('buildings_bruges\surface_Church_of_our_Lady_Bruges.npy')    
+            X = np.load('./buildings_bruges/surface_Church_of_our_Lady_Bruges.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
