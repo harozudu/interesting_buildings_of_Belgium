@@ -69,7 +69,7 @@ elif city_type == 'Brussels':
             st.subheader('The graph is dynamic, you can zoom-in, zoom-out or rotate.')
             address = 'Grand Place, Grand Place 1, 1000 Brussels'
             
-            X = np.load(r'buildings_brussels\surface_Grand_Place_Brussels.npy')    
+            X = np.load('.\buildings_brussels\surface_Grand_Place_Brussels.npy')    
             N = len(X[:,0])
             M = len(X[0,:])  
             clipped_df = pd.DataFrame(X)
