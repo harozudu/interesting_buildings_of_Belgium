@@ -15,15 +15,46 @@ pio.renderers.default='browser'
 
 st.set_page_config(layout="wide")
 
-# col1, col_mid, col2 = st.columns((1, 0.1, 1))
+st.title('Interesting buildings of Belgium')
 st.write('\n')
+st.write('\n')
+st.write('\n')
+col1, col_mid, col2 = st.beta_columns((1, 0.1, 1))
+with col1:
+    st.subheader('This app basically works with the DSM and DTM files that are provided by GeoPunt.be.')
+    st.write('\n') 
+    st.write('More information can be found in the link below:')
+    st.write('[https://www.geopunt.be/catalogus/datasetfolder/2caeb91f-df64-47c5-828d-cb1f0db3a41c](https://www.geopunt.be/catalogus/datasetfolder/2caeb91f-df64-47c5-828d-cb1f0db3a41c)')    
+    st.write('\n') 
+    st.write(f'<iframe \
+             width="700" \
+             height="600"\
+             src="https://www.geopunt.be/catalogus/datasetfolder/2caeb91f-df64-47c5-828d-cb1f0db3a41c"></iframe>',
+             unsafe_allow_html=True )     
+
+with col2:
+    st.write('Those files are images that exist of points that were gathered by LIDAR. \
+            Simply put: a plane flew over the area and calculated the geographical \
+            surface and the shapes and height of structures by measuring the back scattering light from a laser. \
+            By using the shapefiles, the Lambert-72 coördinates provided in the TIFFs \
+            and an API access to the map provided by the Flemish government, \
+            the program calculates the exact position and three-dimensional shape of the building selected.')
+    st.write('\n')       
+    st.write('The libraries [rioxarray](https://corteva.github.io/rioxarray/stable/) and \
+             [xarray](http://xarray.pydata.org/en/stable/) were used to manipulate the TIFFs. \
+             Requests gets us the info through the API, that is then interpreted with json. \
+             Shapely.geometry and shapely.ops create and join the seperate polygons, \
+             that are then plotted using plotly.graph_objects and plotly.express.')
+    st.write('\n')       
+    st.write('\n')    
+    st.subheader('To visualize different buildings in Belgium, you need to choose the city and the building.')
+    st.subheader('A 3d plot of the selected building will be shown with the height above sea level addition to the information on the web \
+                for the building.')
+
 st.markdown("""---""")
-
-
 
 city_type = st.selectbox('Please select a city:',
                                   ('None','Brussels', 'Antwerp', 'Gent', 'Bruges'))     
-
 
 if city_type == 'None':
     st.write('Please select a valid city')
@@ -468,4 +499,3 @@ elif city_type == 'Bruges':
                      height="600"\
                      src="https://en.wikipedia.org/wiki/Church_of_Our_Lady,_Bruges"></iframe>',
                      unsafe_allow_html=True )
-
